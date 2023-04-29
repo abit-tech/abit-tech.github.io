@@ -10631,6 +10631,35 @@ footer.section-footer .list-group li {
 		margin-bottom: 24px;
 	}
 
+	.home-section-2 {
+		height: auto;
+		padding-bottom: 20%;
+	}
+
+	.home-section-2 .creators-list-text {
+		text-align: center;
+	}
+
+	.home-section-2 .row {
+		margin: 0;
+	}
+
+	.home-section-2 .slider-image {
+		width: 100%;
+	}
+
+	.home-section-2 .bottom-token-info {
+		left: 35px;
+	}
+
+	.home-section-2 .about-creators .top-left-part {
+		left: 42px;
+	}
+
+	.home-section-2 #carouselExampleControls {
+		top: 30px;
+	}
+
 	.home-section-3 .heading {
 		font-size: 20px;
 		line-height: 24px;
@@ -10639,6 +10668,45 @@ footer.section-footer .list-group li {
 	.home-section-3 .description {
 		font-size: 12px;
 		line-height: 132%;
+	}
+
+	.home-section-3 {
+		border-bottom: 0;
+	}
+
+	.home-section-4 {
+		height: auto;
+	}
+
+	.home-section-4 .row {
+		margin-top: 50px !important;
+	}
+
+	.home-section-4 .bottom-right-token-info {
+		top: 26px;
+	}
+
+	.home-section-4 .bottom-left-token-portion .description {
+		font-size: 32px;
+		line-height: 39px;
+		width: 200px;
+	}
+
+	.home-section-4 .bottom-left-token-portion .heading {
+		font-size: 12px;
+		line-height: 14px;
+	}
+
+	.bottom-left-token-portion img {
+		width: 19px;
+	}
+
+	.home-section-4 .top-right-live-now {
+		bottom: 0px;
+		top: -45px;
+		position: relative !important;
+		right: 30px;
+		float: right;
 	}
 
 	.home-section-5 .left-content-wrapper {
@@ -10669,6 +10737,43 @@ footer.section-footer .list-group li {
 
 	.home-section-5 .gif-img img {
 		width: 100%;
+	}
+}
+@media only screen and (min-width: 601px) and (max-width: 1199px) {
+	.home-section-1 .left-section-wrapper {
+		position: relative !important;
+		top: 50px;
+	}
+
+	.left-section-wrapper .text-heading {
+		width: 100%;
+	}
+
+	.home-section-1 .left-section-wrapper {
+		position: relative !important;
+		top: 50px;
+		margin-bottom: 80px;
+	}
+
+	.home-section-2 {
+		padding-bottom: 20%;
+		height: auto;
+	}
+
+	.home-section-3 {
+		padding-bottom: 13%;
+		height: auto;
+	}
+
+	.home-section-4 {
+		min-height: auto;
+		padding-bottom: 8%;
+	}
+
+	.home-section-4 .bottom-left-token-portion .description {
+		font-size: 36px;
+		line-height: 40px;
+		width: 250px;
 	}
 }
 body {
@@ -11103,7 +11208,7 @@ body {
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
 	.left-section-1 {
-		text-align: center;
+		text-align: left;
 	}
 
 	.left-section-1 .cr-left-section-heading {
@@ -11870,6 +11975,12 @@ body {
 	opacity: 0.5;
 }
 
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+	#waitListModal #waitListEmail {
+		width: 100% !important;
+	}
+}
 .button-carousel {
 	margin-left: 0 3%;
 	width: 2rem;
