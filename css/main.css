@@ -9960,6 +9960,10 @@ button {
 	border-radius: 60px;
 }
 
+.neo-primary-btn:focus {
+	box-shadow: 3px 7px 0px rgba(0, 0, 0, 0.99);
+}
+
 .abit-transparent-btn {
 	border-radius: 60px;
 	font-family: "Inter";
@@ -9968,6 +9972,10 @@ button {
 	font-size: 14px;
 	line-height: 100%;
 	letter-spacing: 0.04em;
+}
+
+.abit-transparent-btn:focus {
+	box-shadow: 2px 4px #000000, 2px 4px 0 1px #FFFFFF;
 }
 
 .abit-outline-purple {
@@ -10203,6 +10211,7 @@ nav .navbar-brand {
 	text-align: center;
 	letter-spacing: 0.05em;
 	width: 409px;
+	color: #000000;
 }
 
 .home-section-1 .text-para {
@@ -10320,6 +10329,11 @@ nav .navbar-brand {
 	color: #000000;
 }
 
+.home-section-2 .slider-image {
+	height: 312px !important;
+	width: 284px;
+}
+
 .home-section-2 #carouselExampleControls {
 	top: 84px;
 }
@@ -10383,7 +10397,7 @@ nav .navbar-brand {
 }
 
 .home-section-5 .left-content-wrapper {
-	margin: 176px 0;
+	margin: 186px 0;
 }
 
 .home-section-5 .left-content-wrapper .cstm-btn-props {
@@ -10427,6 +10441,7 @@ nav .navbar-brand {
 	font-size: 24px;
 	line-height: 29px;
 	color: #000000;
+	margin-bottom: 40px;
 }
 
 .home-section-4 .bottom-right-token-info {
@@ -10547,8 +10562,8 @@ footer.section-footer .list-group li {
 	font-style: normal;
 	color: #FFFFFF;
 	position: relative;
-	left: 30px;
-	top: 20px;
+	left: 25px;
+	top: 25px;
 }
 
 .home-section-2 .about-creators .top-left-part .user-image {
@@ -10571,13 +10586,13 @@ footer.section-footer .list-group li {
 
 .home-section-2 .bottom-token-info {
 	position: relative;
-	top: 186px;
+	top: 178px;
 	width: 100%;
 	background: rgba(255, 255, 255, 0.2) !important;
 	backdrop-filter: blur(25px) !important;
 	border-radius: 12px;
 	margin: 0 auto;
-	left: 28px;
+	left: 19px;
 	height: 53px;
 }
 
@@ -10649,7 +10664,7 @@ footer.section-footer .list-group li {
 	}
 
 	.home-section-2 .bottom-token-info {
-		left: 35px;
+		left: 10%;
 	}
 
 	.home-section-2 .about-creators .top-left-part {
@@ -10684,6 +10699,11 @@ footer.section-footer .list-group li {
 
 	.home-section-4 .bottom-right-token-info {
 		top: 26px;
+		width: calc(100% - 65px);
+	}
+
+	.home-section-4 .bottom-right-token-info .token-info-content {
+		width: 100%;
 	}
 
 	.home-section-4 .bottom-left-token-portion .description {
@@ -10776,6 +10796,12 @@ footer.section-footer .list-group li {
 		width: 250px;
 	}
 }
+@media only screen and (min-width: 992px) {
+	.home-section-1 .img-text-wrapper {
+		position: relative;
+		left: 7%;
+	}
+}
 body {
 	overflow-x: hidden;
 }
@@ -10827,7 +10853,7 @@ body {
 	background-image: url(../svg/Creator/section-2-img.svg);
 	background-size: cover;
 	background-repeat: no-repeat;
-	height: 821px;
+	height: 682px;
 	margin-top: -20px;
 }
 

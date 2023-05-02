@@ -7,16 +7,16 @@
 </head>
 <body>
 	<header style="height: 67px;">
-		<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" style="height: 67px;">
+		<nav class="navbar navbar-expand-lg navbar-light bg-light" style="height: 67px;">
 			<div class="container">
 			<a class="navbar-brand" href="#">aBit</a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+			<!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+			</button> -->
+			<div class="expand navbar-expand" id="navbarTogglerDemo02">
 				<ul class="navbar-nav ml-auto mt-2 mt-lg-0 ">
 				<li class="nav-item active">
-					<a class="nav-link nav-item-creator" href="#">Are you a creator? <span class="sr-only">(current)</span></a>
+					<a class="nav-link nav-item-creator" href="creatorpage.html">Are you a creator? <span class="sr-only">(current)</span></a>
 				</li>
 				</ul>
 				<!-- <button class="btn abit-outline-purple my-2 my-sm-0" data-toggle="modal" data-target="#registerModal">Login / Signup</button> -->
@@ -57,7 +57,7 @@
 					<p class="mb-5 creators-list-text">Your Creators are On Board</p>
 					<div class="carousel-inner">
 					<div class="row carousel-item active">
-						<div class="col-12 col-lg-3 col-sm-6 col-md-6">
+						<div class="col-12 col-lg-3 col-sm-6 col-md-6 mobile-view-off">
 							<img class="d-block slider-image" src="svg/home/token-a.svg" alt="First slide" style="height:322px">
 							<div class="about-creators position-absolute">
 								<div class="top-left-part">
@@ -113,7 +113,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-12 col-lg-3 col-sm-6 col-md-6">
+						<div class="col-12 col-lg-3 col-sm-6 col-md-6 mobile-view-off">
 							<img class="d-block slider-image" src="svg/home/token-c.svg" alt="First slide" style="height:322px">
 							<div class="about-creators position-absolute">
 								<div class="top-left-part">
@@ -141,7 +141,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-12 col-lg-3 col-sm-6 col-md-6">
+						<div class="col-12 col-lg-3 col-sm-6 col-md-6 mobile-view-off">
 							<img class="d-block slider-image" src="svg/home/token-d.svg" alt="First slide" style="height:322px">
 							<div class="about-creators position-absolute">
 								<div class="top-left-part">
@@ -314,7 +314,7 @@
 		<div class="container">
 			<div class="row" style="margin-top: 100px;">
 				<div class="col-md-12">
-					<p class="pl-3 main-heading mb-4">And now it’s your turn. Get started right away!</p>
+					<p class="pl-3 main-heading">And now it’s your turn. Get started right away!</p>
 					<div class="position-relative">
 						<img src="svg/home/section-4-live-token.svg" class="mt-3 mobile-view-off" alt="" style="width: 100%;">
 						<img src="svg/home/section-4-live-token-mobile.svg" class="mt-3 mobile-view-on" alt="" style="width: 100%;">
@@ -359,7 +359,7 @@
 					<div class="left-content-wrapper">
 						<h3 class="heading"><i>Hold On!</i> Are you a Creator?</h3>
 						<p class="description">Set yourself free. Check out our creator’s program.</p>
-						<button type="submit" class="btn neo-primary-btn abit-white abit-bg-purple d-inline-flex cstm-btn-props" data-toggle="modal" data-target="#waitListModal">Join Now</button>
+						<button type="button" class="btn neo-primary-btn abit-white abit-bg-purple d-inline-flex cstm-btn-props" data-toggle="modal" data-target="#waitListModal">Join Now</button>
 					</div>
 				</div>
 				<div class="col-md-6 col-lg-6 col-sm-12 col-12 order-lg-2 order-md-2 order-1">
@@ -380,9 +380,9 @@
 				</div> 
 				<div class="col-lg-6 col-md-6 col-sm-7 col-6">
 					<ul class="list-group border-left float-right">
-						<li class="list-group-item border-0">Home</li>
-						<li class="list-group-item border-0">Are you a creator?</li>
-						<li class="list-group-item border-0">Support</li>
+						<a href="index.html"><li class="list-group-item border-0">Home</li></a>
+						<a href="creatorpage.html"><li class="list-group-item border-0">Are you a creator?</li></a>
+						<!-- <li class="list-group-item border-0">Support</li> -->
 					</ul>
 				</div>
 			</div>
@@ -396,7 +396,7 @@
 
 	<!-- Scripts -->
 	<script src="js/loadExtLibrary.js"></script>
-	<!-- <script src="js/header.js"></script>-->
+	<script src="js/waitlistModal.js"></script>
 	<script src="js/main.js"></script> 
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
 	<script src="../../node_modules/silkrouter/dist/umd/silkrouter.min.js"></script>	
@@ -405,5 +405,15 @@
 	<script src="js/detects.js"></script>
 	<script src="js/another-file.js"></script>
 	<script src="js/main.polyfills.js"></script>
+
+	<script>
+		// setTimeout(function() {
+		// 	$(".waitlist-cta-btn").off("click").on("click", function() {
+		// 	debugger;
+		// 	saveEmailInfo(this);
+		// 	});
+		// })
+		
+	  </script>
 </body>
 </html>

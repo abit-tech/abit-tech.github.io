@@ -15501,6 +15501,11 @@ $(function() {
     $(".toggleRegisterLoginPopup").off("click").on("click", function() {
         openLoginModal(this);
     });
+    $(".waitlist-cta-btn").off("click").on("click", function() {
+			debugger;
+      let email = $(this).closest(".modal-content").find("#waitListEmail");
+			  saveEmailInfo(email);
+			});
  }
 
  function openLoginModal(elem) {
@@ -15514,6 +15519,23 @@ $(function() {
     }  
 }
 
+function saveEmailInfo(input) {
+
+  $.ajax({
+    url: "https://abit-backend-production.up.railway.app/api/waitlist",
+    type: 'POST',
+    data: {
+      "email": $(input).val()
+    },
+   // contentType: "application/json; charset=utf-8",
+    success: function (data) {
+      $(input).val("");
+},
+    error: function (XMLHttpRequest, textStatus, errorThrown) {
+       $(input).val("");
+    }
+  });
+}
 function toggleArtWorkImg() {
     setInterval(function() {
         $(".gif-img").find("img.gif-person").toggleClass("d-none");

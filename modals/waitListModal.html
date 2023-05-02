@@ -42,9 +42,8 @@
           
           <!-- Modal footer -->
           <div class="modal-footer justify-content-center border-0 mb-5">
-            <button type="submit" class="btn neo-primary-btn abit-white abit-bg-purple cstm-btn-props" data-dismiss="modal">Join</button>
+            <button class="btn neo-primary-btn abit-white abit-bg-purple cstm-btn-props waitlist-cta-btn" data-dismiss="modal">Join</button>
           </div>
-          
         </div>
       </div>
     </div>
@@ -53,10 +52,17 @@
 
 
   <!-- Scripts -->
-
+	<script src="js/waitlist.js"></script>
 	<script src="js/detects.js"></script>
 	<script src="js/another-file.js"></script>
 	<script src="js/main.polyfills.js"></script>
+  <script>
+    debugger;
+     $(".waitlist-cta-btn").off("click").on("click", function() {
+        debugger;
+        saveEmailInfo(this);
+    });
+  </script>
 	
 </body>
 </html>
