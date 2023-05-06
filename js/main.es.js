@@ -15525,9 +15525,9 @@ function saveEmailInfo(input) {
     url: "https://abit-backend-production.up.railway.app/api/waitlist",
     type: 'POST',
     data: {
-      "email": $(input).val()
+      "email": JSON.stringify($(input).val())
     },
-   // contentType: "application/json; charset=utf-8",
+    contentType: "application/json; charset=utf-8",
     success: function (data) {
       $(input).val("");
 },
