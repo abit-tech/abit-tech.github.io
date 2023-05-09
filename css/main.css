@@ -10950,11 +10950,11 @@ body {
 }
 
 .cr-section-2 {
-	background-image: url(../svg/Creator/section-2-img.svg);
+	background-image: url(../svg/Creator/x.svg);
 	background-size: cover;
 	background-repeat: no-repeat;
 	height: 682px;
-	margin-top: -20px;
+	border-bottom: 1px solid #1E1E1E;
 }
 
 .cr-section-2 .right-wrapper .heading {
@@ -10989,18 +10989,23 @@ body {
 }
 
 .cr-section-3 {
-	height: 1092px;
+	height: 1007px;
 	position: relative;
 	top: 176px;
 }
 
-.cr-section-3-main-content {
+.cr-section-3 .cr-section-3-main-content.main-content-3 {
+	padding-top: 125px;
+}
+
+.cr-section-4 .cr-section-3-main-content, .cr-section-5 .cr-section-3-main-content {
 	position: relative;
-	top: 150px;
+	/* top: 150px; */
+	padding: 150px 0 60px;
 }
 
 .cr-section-4, .cr-section-5 {
-	height: 867px;
+	height: 100%;
 }
 
 .cr-section-3 .main-heading {
@@ -11229,7 +11234,7 @@ body {
 
 .schedule-meet-wrapper {
 	position: absolute;
-	top: 141px;
+	top: 191px;
 	color: #ffffff;
 	text-align: center;
 }
@@ -11333,26 +11338,36 @@ body {
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
+	nav.navbar {
+		border-bottom: 1px solid #000000;
+	}
+
+	.divider-1 {
+		border-top: 0.5px solid #959595 !important;
+	}
+
 	.left-section-1 {
-		text-align: left;
+		text-align: center;
 	}
 
 	.left-section-1 .cr-left-section-heading {
-		width: 100%;
+		width: 338px;
 		font-size: 30px;
 		line-height: 36px;
 		top: 20px;
 		position: relative;
+		text-shadow: none;
 	}
 
 	.left-section-1 .cr-left-section-para {
-		width: 100%;
+		width: 226px;
 		font-size: 16px;
 		line-height: 148%;
 		top: 6px;
 		position: relative;
 		height: auto;
 		padding-bottom: 20px;
+		margin: 5px auto 30px;
 	}
 
 	.cr-right-sec-mobileinfo {
@@ -11363,39 +11378,45 @@ body {
 	}
 
 	.cr-section-1 {
-		max-height: 846px;
-		min-height: 300px;
-		height: auto;
-		padding: 30px 0 80px 0;
+		height: 100%;
+		padding: 58px 0 88px 0;
+	}
+
+	.cr-section-2 {
+		margin-top: -7px;
+		height: 100%;
 	}
 
 	.cr-section-3 .main-heading {
 		font-size: 20px;
 		line-height: 24px;
-		margin-bottom: 60px;
+		margin-bottom: 48px;
 	}
 
 	.cr-section-3 {
-		top: 40px;
-		max-height: 1092px;
-		min-height: 650px;
+		top: 44px;
 		height: 100%;
-		padding-bottom: 60px;
+		padding-bottom: 65px;
 	}
 
 	.cr-section-4, .cr-section-5 {
-		max-height: 867px;
-		height: auto;
-		margin: 50px 0;
+		height: 100%;
+		margin: 46px 0 42px;
 	}
 
 	.cr-section-3-main-content {
 		top: 0;
 	}
 
+	.cr-common-section .cstm-accordian {
+		margin-top: 19px !important;
+		width: 100%;
+	}
+
 	.cr-section-3 .heading, .cr-section-4 .heading, .cr-section-5 .heading {
 		font-size: 13px;
 		line-height: 120%;
+		margin-top: 42px !important;
 	}
 
 	.cr-section-3 .description, .cr-section-4 .description, .cr-section-5 .description {
@@ -11410,17 +11431,48 @@ body {
 	}
 
 	.cr-common-section .cstm-card {
-		width: 100%;
+		width: 100% !important;
+		margin-bottom: 19px !important;
 	}
 
 	.cr-section-6-mini p {
 		font-size: 16px;
 		line-height: 181.24%;
+		width: 214px;
+		margin: 26px auto;
 	}
 
 	.cr-section-2 .right-wrapper .heading {
 		font-size: 16px;
 		line-height: 148%;
+		width: 226px;
+	}
+
+	.cr-section-2 .right-wrapper .cstm-btn-additional-prop {
+		font-size: 13.673px;
+		/* height: 44px; */
+		width: 100%;
+	}
+
+	.cr-section-2 .about-creators .top-left-part {
+		top: 22px !important;
+		left: 22px;
+	}
+
+	.cr-section-2 .about-creators .top-left-part .heading {
+		letter-spacing: -0.05em;
+		font-size: 11.8942px;
+		line-height: 14px;
+	}
+
+	.cr-section-2 .about-creators .top-left-part .user-image {
+		width: 15px;
+		height: 15px;
+	}
+
+	.cr-section-2 .right-wrapper .collapse-accordian-btn {
+		font-size: 12px;
+		line-height: 14px;
 	}
 
 	.cr-common-section .card-header {
@@ -11433,8 +11485,7 @@ body {
 	}
 
 	.cr-section-7 {
-		max-height: 700px;
-		height: auto;
+		height: 100%;
 	}
 
 	.cr-section-7 .left-content {
@@ -11446,11 +11497,12 @@ body {
 	.cr-section-7 .left-content .gif-person {
 		width: 100%;
 		height: 100%;
+		margin-top: 50px;
 	}
 
 	.cr-section-7 .schedule-meet-wrapper {
 		position: relative;
-		top: 25px;
+		top: 88px;
 	}
 
 	.cr-section-7 .schedule-meet-wrapper .description {
@@ -11467,9 +11519,19 @@ body {
 		line-height: 132%;
 	}
 
+	.cr-section-7 .schedule-meet-wrapper .join-now-additional-prop {
+		width: 237px;
+		height: 47px;
+		font-size: 14px;
+	}
+
 	.cr-section-6 {
 		padding-bottom: 40px;
 		overflow: hidden;
+	}
+
+	.cr-section-6-mini {
+		border-bottom: none;
 	}
 
 	.cr-section-6 .onboard-with-abit-text {
@@ -11477,7 +11539,7 @@ body {
 		font-size: 20px;
 		line-height: 24px;
 		text-align: center;
-		padding: 40px 0;
+		padding: 77px 0 58px;
 	}
 
 	footer.section-footer .heading {
@@ -11506,6 +11568,11 @@ body {
 
 	.mobile-view-off {
 		display: none;
+	}
+
+	footer.section-footer {
+		height: 100%;
+		padding-bottom: 25px;
 	}
 }
 @media only screen and (min-width: 600px) {
@@ -11584,7 +11651,7 @@ body {
 	}
 
 	.cr-common-section .cstm-card {
-		width: 100%;
+		width: 100% !important;
 	}
 
 	.cr-section-6-mini p {
@@ -12338,5 +12405,82 @@ body {
 	}
 	to {
 		transform: scale(0.75) translateX(0);
+	}
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+	.cards__container {
+		padding: 0;
+	}
+
+	.box {
+		/*     margin: -1.5rem; */
+		width: 3rem;
+		height: 10rem;
+		/* transition: 1s all; */
+	}
+
+	.box:nth-child(2n) {
+		transform: scale(0.6);
+		z-index: -1;
+	}
+
+	.box:nth-child(2) {
+		left: -6%;
+	}
+
+	.box:nth-child(4) {
+		left: 6%;
+	}
+
+	.box:nth-child(4n+1) {
+		transform: scale(0.5);
+	}
+
+	.box:nth-child(1) {
+		left: 4%;
+	}
+
+	.box:nth-child(5) {
+		left: -3%;
+	}
+
+	.cr-section-2 .token-info-content {
+		width: 202px !important;
+		font-size: 9px;
+	}
+
+	.cr-section-2 .token-info-content .list-group-item {
+		font-size: 10px;
+	}
+
+	.cr-section-2 .tokens-wrapper {
+		top: 0 !important;
+	}
+
+	.cr-section-2 .bottom-token-info {
+		top: 150px !important;
+		left: 20px !important;
+	}
+
+	.cr-section-2 .right-wrapper {
+		top: -50px;
+	}
+
+	.box .card-img {
+		height: 267px !important;
+		width: 244px !important;
+	}
+
+	.button-carousel {
+		height: 15px;
+	}
+
+	.button-carousel.left {
+		left: -28px !important;
+	}
+
+	.button-carousel.right {
+		right: -28px;
 	}
 }

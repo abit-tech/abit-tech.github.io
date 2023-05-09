@@ -8,16 +8,16 @@
 </head>
 <body>
 	<header style="height: 67px;">
-		<nav class="navbar navbar-expand-lg navbar-light bg-light" style="height: 68px;">
+		<nav class="navbar navbar-expand-lg navbar-light bg-light" style="height: 67px; border-bottom: 0;">
 			<div class="container">
-			<a class="navbar-brand" href="#">aBit</a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+			<a class="navbar-brand" href="index.html">aBit</a>
+			<!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
-			</button>
+			</button> -->
 			<div class="expand navbar-expand" id="navbarTogglerDemo02">
-				<ul class="navbar-nav ml-auto mt-2 mt-lg-0 ">
+				<ul class="navbar-nav ml-auto mt-lg-0 ">
 				<li class="nav-item active">
-					<a class="nav-link nav-item-creator" href="#">Are you a creator? <span class="sr-only">(current)</span></a>
+					<a class="nav-link nav-item-creator" href="creatorpage.html">Are you a creator? <span class="sr-only">(current)</span></a>
 				</li>
 				</ul>
 				<!-- <button class="btn abit-outline-purple my-2 my-sm-0" data-toggle="modal" data-target="#registerModal">Login / Signup</button> -->
@@ -38,7 +38,7 @@
                     </div>
                 </div>
                 <div class="col-lg-5 col-md-7 col-sm-5 col-xs-12">
-                    <img src="svg/Creator/section-1-mobilegraphics.svg" alt="mobile inforgraphics" class="cr-right-sec-mobileinfo">
+                    <img src="svg/Creator/section-1-mobilegraphicss.svg" alt="mobile inforgraphics" class="cr-right-sec-mobileinfo">
                 </div>
 			</div>
 		</div>
@@ -48,12 +48,12 @@
 			<div class="row">
 				<div class="col-md-7 text-center">
                     <div class="tokens-wrapper d-inline-flex position-relative" style="top: 120px;">
-						<div class="button-carousel" style="left: 0px;" onclick="shiftLeft()"><img src="svg/prev-icon.svg" alt=""></div>
+						<div class="button-carousel left" style="left: 0px;" onclick="shiftLeft()"><img src="svg/prev-icon.svg" alt=""></div>
 							<div class="cards-wrapper">
 								<ul class="cards__container">
 									<li class="box">
 										<div class="d-flex">
-											<img class="d-block" src="svg/Creator/token-2.svg" alt="First slide" style="height:440px; width:400px;">
+											<img class="d-block card-img" src="svg/home/token-c.svg" alt="First slide" style="height:440px; width:400px;">
 											<div class="about-creators position-absolute">
 												<div class="top-left-part text-left" style="top: 35px;">
 													<div class="heading">Moved to NYC</div>
@@ -83,7 +83,7 @@
 									</li>
 									<li class="box">
 										<div class="d-flex">
-											<img class="d-block" src="svg/Creator/token-1.svg" alt="First slide" style="height:440px; width:400px;">
+											<img class="d-block card-img" src="svg/Creator/token-1.svg" alt="First slide" style="height:440px; width:400px;">
 											<div class="about-creators position-absolute">
 												<div class="top-left-part text-left" style="top: 35px">
 													<div class="heading">Moved to NYC</div>
@@ -113,7 +113,7 @@
 									</li>
 									<li class="box">
 										<div class="d-flex">
-											<img class="d-block" src="svg/home/token-a.svg" alt="First slide" style="height:440px; width:400px;">
+											<img class="d-block card-img" src="svg/home/token-a.svg" alt="First slide" style="height:440px; width:400px;">
 											<div class="about-creators position-absolute">
 												<div class="top-left-part text-left" style="top: 35px">
 													<div class="heading">Moved to NYC</div>
@@ -143,7 +143,7 @@
 									</li>
 									<li class="box">
 										<div class="d-flex">
-											<img class="d-block" src="svg/Creator/token-3.svg" alt="First slide" style="height:440px; width:400px;">
+											<img class="d-block card-img" src="svg/Creator/token-2.svg" alt="First slide" style="height:440px; width:400px;">
 											<div class="about-creators position-absolute">
 												<div class="top-left-part text-left" style="top: 35px">
 													<div class="heading">Moved to NYC</div>
@@ -173,7 +173,7 @@
 									</li>
 									<li class="box">
 										<div class="d-flex">
-											<img class="d-block" src="svg/home/token-c.svg" alt="First slide" style="height:440px; width:400px;">
+											<img class="d-block card-img" src="svg/Creator/token-3.svg" alt="First slide" style="height:440px; width:400px;">
 											<div class="about-creators position-absolute">
 												<div class="top-left-part text-left" style="top: 35px">
 													<div class="heading">Moved to NYC</div>
@@ -203,7 +203,7 @@
 									</li>
 								</ul>
 							</div>
-							<div class="button-carousel" onclick="shiftRight()"><img src="svg/next-icon.svg" alt=""></div>
+							<div class="button-carousel right" onclick="shiftRight()"><img src="svg/next-icon.svg" alt=""></div>
 						
                         <!-- <img class="slider-img" src="https://raw.githubusercontent.com/DaftCreation/Card-Slider/master/NEW%20YORK.jpg" alt="" class="c1">
                         <img class="slider-img" src="https://raw.githubusercontent.com/DaftCreation/Card-Slider/master/PARIS.jpg" alt="" class="c2">
@@ -215,7 +215,7 @@
 				<div class="col-md-5">
 					<div class="right-wrapper">
 						<h3 class="heading">As co-owners, your audience can <i>invest</i> in your videos, and <i>earn</i> when the video earns.</h3>
-						<button type="submit" class="btn neo-primary-btn abit-white abit-bg-purple cstm-btn-additional-prop mt-4" data-dismiss="modal">Sign me up!</button>
+						<button type="submit" class="btn neo-primary-btn abit-white abit-bg-purple cstm-btn-additional-prop mt-4 showWaitListModal" data-dismiss="modal" data-target="#waitListModal">Sign me up!</button>
 						<div id="accordionn" class="mt-4 cstm-accordian">
 							<div class="card mb-5 cstm-card" style="width: 344px; box-shadow: 2px 4px #e6e6e6, 2px 4px 0 1px #000000;">
 							  <div class="card-header text-left" id="headingOne1">
@@ -246,7 +246,7 @@
 			<div class="row">
 				<div class="col-md-12 text-center">
 					<h2 class="main-heading">Creative Freedom <i>backed</i> by Financial Security</h2>
-					<div class="cr-section-3-main-content">
+					<div class="cr-section-3-main-content main-content-3">
 						<img src="svg/Creator/section-3-info-ball.svg" alt="">
 						<h4 class="mt-5 heading">Same efforts. more revenue</h4>
 						<p class="description">Create your video as usual, and fund it through your community of micro-investors.</p>
@@ -292,7 +292,7 @@
 			</div>
 		</div>
 	</section>
-	<hr>
+	<hr class="divider-1 divider-border-color-1">
 	<section class="cr-section-4 cr-common-section">
 		<div class="container">
 			<div class="row">
@@ -394,7 +394,7 @@
 					<div class="schedule-meet-wrapper">
                         <h3 class="heading"><i>Only</i> aBit is left!</h3>
 						<p class="description">Between you and the creator journey you deserve.</p>
-						<button type="button" class="btn neo-primary-btn abit-white abit-transparent-btn d-inline-flex border border-white join-now-additional-prop mt-2" data-dismiss="modal" data-target="#waitListModal">Join the Waitlist!</button>
+						<button type="button" class="btn neo-primary-btn abit-white abit-transparent-btn d-inline-flex border border-white join-now-additional-prop mt-2 showWaitListModal" data-dismiss="modal" data-target="#waitListModal">Join the Waitlist!</button>
 					</div>
 				</div>
 			</div>
@@ -409,9 +409,9 @@
 				</div> 
 				<div class="col-lg-6 col-md-6 col-sm-7 col-6">
 					<ul class="list-group border-left float-right">
-						<li class="list-group-item border-0">Home</li>
-						<li class="list-group-item border-0">Are you a creator?</li>
-						<li class="list-group-item border-0">Support</li>
+						<a href="index.html"><li class="list-group-item border-0">Home</li></a>
+						<a href="creatorpage.html"><li class="list-group-item border-0">Are you a creator?</li></a>
+						<!-- <li class="list-group-item border-0">Support</li> -->
 					</ul>
 				</div>
 			</div>
@@ -427,7 +427,7 @@
 
 	<!-- Scripts -->
 	<script src="js/loadExtLibrary.js"></script>
-	<script src="js/carousel.js"></script> 
+	<!-- <script src="js/carousel.js"></script>  -->
 	<!-- <script src="js/header.js"></script>-->
 	<script>
 		function shiftLeft() {
@@ -474,16 +474,19 @@ function shiftRight() {
     }, 500);
 
 }
+$(".showWaitListModal").off("click").on("click", function() {
+		$("#waitListModal").modal("show");
+});
 	</script>
 	<script src="js/main.js"></script> 
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-	<script src="../../node_modules/silkrouter/dist/umd/silkrouter.min.js"></script>	
+	<!-- <script src="../../node_modules/silkrouter/dist/umd/silkrouter.min.js"></script>	 -->
 	<script src="https://cdn.jsdelivr.net/npm/jqueryrouter@2.2.12/dist/js/jquery.router.min.js"></script>
 
 	
 	
 	<script src="js/detects.js"></script>
 	<script src="js/another-file.js"></script>
-	<script src="js/main.polyfills.js"></script>
+	
 </body>
 </html>
