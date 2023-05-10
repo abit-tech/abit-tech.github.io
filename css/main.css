@@ -11401,7 +11401,21 @@ body {
 
 	.cr-section-4, .cr-section-5 {
 		height: 100%;
-		margin: 46px 0 42px;
+		margin: 65px 0 48px;
+	}
+
+	.cr-section-4 .cr-section-3-main-content, .cr-section-5 .cr-section-3-main-content {
+		position: relative;
+		padding: 0;
+	}
+
+	.cr-section-3 .cr-section-3-main-content.main-content-3 {
+		padding-top: 0;
+	}
+
+	.cr-common-section .card-body {
+		font-size: 10px;
+		line-height: 160%;
 	}
 
 	.cr-section-3-main-content {
@@ -12452,6 +12466,7 @@ body {
 
 	.cr-section-2 .token-info-content .list-group-item {
 		font-size: 10px;
+		padding: 0.3rem 0.3rem;
 	}
 
 	.cr-section-2 .tokens-wrapper {
@@ -12461,6 +12476,7 @@ body {
 	.cr-section-2 .bottom-token-info {
 		top: 150px !important;
 		left: 20px !important;
+		height: 44px;
 	}
 
 	.cr-section-2 .right-wrapper {
