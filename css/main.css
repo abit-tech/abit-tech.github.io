@@ -10210,8 +10210,9 @@ nav .navbar-brand {
 }
 
 .home-section-1 {
-	background: url(../svg/home/section-1-bg.svg) left top repeat-x;
+	background: url(../img/section-1-bg.png) left top repeat-x;
 	height: 1380px;
+	background-repeat: repeat;
 }
 
 .home-section-1 .text-heading {
@@ -10395,7 +10396,7 @@ nav .navbar-brand {
 }
 
 .home-section-5 {
-	background-image: url(../svg/home/section-5-bg.svg);
+	background-image: url(../img/section-5-bg.png);
 	background-size: cover;
 	background-repeat: no-repeat;
 	height: 572px;
@@ -10542,6 +10543,8 @@ footer.section-footer .heading {
 	font-size: 40px;
 	line-height: 48px;
 	color: #262626;
+	position: relative;
+	top: 6px;
 }
 
 footer.section-footer .description {
@@ -10550,9 +10553,8 @@ footer.section-footer .description {
 	font-weight: 400;
 	font-size: 20px;
 	line-height: 24px;
-	text-transform: capitalize;
 	color: #000000;
-	width: 313px;
+	width: 355px;
 }
 
 footer.section-footer .list-group li {
@@ -10589,6 +10591,7 @@ footer.section-footer .list-group li {
 	font-size: 20px;
 	line-height: 24px;
 	letter-spacing: -0.05em;
+	width: 100%;
 }
 
 .home-section-2 .about-creators .top-left-part .description {
@@ -10908,10 +10911,11 @@ body {
 }
 
 .cr-section-1 {
-	background-image: url(../svg/Creator/section-1-bg.svg);
+	background-image: url(../img/cr-section-1-bg.png);
 	background-size: cover;
 	background-repeat: no-repeat;
 	height: 846px;
+	border: 1px solid #000000;
 }
 
 .cr-left-section-heading {
@@ -10951,7 +10955,7 @@ body {
 }
 
 .cr-section-2 {
-	background-image: url(../svg/Creator/x.svg);
+	background-image: url(../img/cr-section-2-bg.png);
 	background-size: cover;
 	background-repeat: no-repeat;
 	height: 682px;
@@ -10987,6 +10991,10 @@ body {
 	letter-spacing: 0.065em;
 	color: #FFFFFF;
 	width: 344px;
+}
+
+.cr-section-2 .bottom-token-info {
+	width: 348px;
 }
 
 .cr-section-3 {
@@ -11135,7 +11143,7 @@ body {
 }
 
 .cr-section-6 {
-	background-image: url(../svg/Creator/section-6-bg.svg);
+	background-image: url(../img/cr-section-6-bg.png);
 	background-size: cover;
 	background-repeat: no-repeat;
 	min-height: 976px;
@@ -11358,6 +11366,7 @@ body {
 		top: 20px;
 		position: relative;
 		text-shadow: none;
+		margin: 0 auto;
 	}
 
 	.left-section-1 .cr-left-section-para {
@@ -11384,7 +11393,6 @@ body {
 	}
 
 	.cr-section-2 {
-		margin-top: -7px;
 		height: 100%;
 	}
 
@@ -11483,6 +11491,11 @@ body {
 	.cr-section-2 .about-creators .top-left-part .user-image {
 		width: 15px;
 		height: 15px;
+	}
+
+	.cr-section-2 .about-creators {
+		position: absolute !important;
+		height: 170px;
 	}
 
 	.cr-section-2 .right-wrapper .collapse-accordian-btn {
@@ -11597,6 +11610,15 @@ body {
 
 	.mobile-view-on {
 		display: none;
+	}
+}
+@media only screen and (max-width: 600px) {
+	.cr-section-2 .bottom-token-info {
+		width: 202px;
+	}
+
+	.cr-section-2 .token-info-content .list-group-item {
+		padding: 0.6rem 0.3rem !important;
 	}
 }
 @media only screen and (min-width: 600px) and (max-width: 992px) {
@@ -11756,6 +11778,15 @@ body {
 		font-size: 14px;
 		line-height: 132%;
 	}
+
+	.cr-section-2 .about-creators {
+		position: absolute !important;
+	}
+}
+@media only screen and (min-width: 601px) and (max-width: 1199px) {
+	.about-creators.cr-about-creators {
+		position: absolute !important;
+	}
 }
 .audi-section-1 {
 	background-image: url(../svg/audiencedash/section-1-bg.svg);
@@ -11785,21 +11816,25 @@ body {
 	color: #ffffff;
 	position: relative;
 	top: 20px;
+	white-space: nowrap;
+	overflow: hidden;
 }
 
 .my-info-card {
-	width: 571px;
-	height: 234px;
-	position: absolute;
+	position: relative;
 	z-index: 2;
-	bottom: -10%;
-	left: 2%;
+	bottom: 0%;
+	left: 0%;
 	border-radius: 24px;
+	top: -80px;
+}
+
+.my-info-card .profile-img {
+	position: absolute;
 }
 
 .my-info-card .bio-wrapper {
 	background-color: #ffffff;
-	min-height: 234px;
 	margin-left: -4px;
 	padding: 20px;
 	border-radius: 0 24px 24px 0;
@@ -11817,22 +11852,26 @@ body {
 
 .my-info-card.audi-section .bio-wrapper {
 	background-color: #ffffff;
-	min-height: 234px;
 	margin-left: -4px;
 	padding: 20px;
 	border-radius: 24px;
 	width: 301px;
 	height: 149px;
 	transform: rotate(-9.79deg);
+	position: absolute;
+	top: 85px;
+	left: -70px;
+	background-image: url(../svg/audiencedash/ticket.svg);
 }
 
 .my-info-card.audi-section .bio-wrapper .users-name {
-	font-family: "Inter";
+	font-family: "Gloria Hallelujah";
 	font-style: normal;
-	font-weight: 700;
-	font-size: 24px;
-	line-height: 29px;
-	letter-spacing: 0.045em;
+	font-weight: 400;
+	font-size: 40px;
+	line-height: 125.47%;
+	/* or 50px */
+	text-align: center;
 	color: #000000;
 }
 
@@ -11861,16 +11900,11 @@ body {
 }
 
 .my-info-card .owner-type {
-	position: absolute;
-	bottom: 10%;
-	left: 9%;
+	position: relative;
 	width: 256px;
 	border-radius: 4px;
 	height: 29px;
-}
-
-.my-info-card.audi-section .owner-type {
-	transform: rotate(-9.79deg);
+	top: 20px;
 }
 
 .my-info-card .owner-type li {
@@ -11890,6 +11924,8 @@ body {
 	line-height: 160%;
 	text-align: center;
 	color: #313131;
+	border: 1px solid #000000;
+	backdrop-filter: blur(25px);
 }
 
 .audi-section-3 {
@@ -11944,8 +11980,9 @@ body {
 }
 
 .audi-section-4 {
-	height: 800px;
+	height: 100%;
 	border-bottom: 1px solid #000000;
+	padding-bottom: 120px;
 }
 
 .about-creators .top-left-part {
@@ -11967,6 +12004,7 @@ body {
 	font-size: 20px;
 	line-height: 24px;
 	letter-spacing: -0.05em;
+	width: 200px;
 }
 
 .about-creators .top-left-part .description {
@@ -11976,19 +12014,20 @@ body {
 }
 
 .bottom-token-info {
-	position: relative;
-	top: 186px;
-	width: 100%;
+	position: absolute;
+	top: 235px;
+	width: 246px;
 	background: rgba(255, 255, 255, 0.2) !important;
 	backdrop-filter: blur(25px) !important;
 	border-radius: 12px;
 	margin: 0 auto;
-	left: 20px;
+	left: 19px;
 	height: 53px;
 }
 
 .token-info-content {
 	width: 246px;
+	text-align: center;
 }
 
 .token-info-content li {
@@ -12001,6 +12040,473 @@ body {
 	padding: 0.5rem 0.5rem;
 	background: transparent !important;
 	color: #ffffff;
+}
+
+.audi-section-4 .slider-image {
+	height: 312px;
+	width: 284px;
+	position: absolute;
+}
+
+.audi-section-4 .row-min-ht {
+	min-height: 312px;
+}
+
+@media only screen and (max-width: 600px) {
+	.audi-section-3 .right-portion {
+		width: 100%;
+		padding-bottom: 35px;
+	}
+
+	.audi-section-3 .list-group-horizontal {
+		width: 100% !important;
+	}
+
+	.audi-section-4 .slider-image.search-img-icon {
+		height: 160px !important;
+		top: 3px !important;
+	}
+
+	.audi-section-4 .slider-image {
+		width: 153px;
+		height: 169px;
+	}
+
+	.about-creators .top-left-part {
+		left: 14px;
+		top: 12px;
+	}
+
+	.about-creators .top-left-part .heading {
+		font-size: 11px;
+	}
+
+	.bottom-token-info {
+		top: 124px;
+		width: 133px;
+		background: rgba(255, 255, 255, 0.2) !important;
+		backdrop-filter: blur(25px) !important;
+		border-radius: 6.4px;
+		margin: 0 auto;
+		left: 10px;
+		height: 30px;
+	}
+
+	.token-info-content {
+		width: 133px;
+		text-align: center;
+	}
+
+	.token-info-content li {
+		font-size: 8px;
+		line-height: 9px;
+		padding: 0.25rem 0.25rem;
+	}
+
+	.about-creators .top-left-part .user-image {
+		width: 14px;
+		height: 14px;
+	}
+
+	.about-creators .top-left-part .heading {
+		font-size: 12px;
+		line-height: 18px;
+		width: 115px;
+	}
+
+	.row-min-ht {
+		margin-top: 0 !important;
+		width: 100%;
+		margin: 0 auto;
+	}
+
+	.about-creators {
+		position: relative !important;
+		height: 170px;
+	}
+
+	.audi-section-3 .collection-detail {
+		top: 80px;
+		bottom: 72px;
+	}
+
+	.my-info-card.audi-section .bio-wrapper {
+		width: 180px;
+		height: 90px;
+		position: absolute;
+		top: 88px;
+		left: 140px;
+	}
+
+	.my-info-card.audi-section .bio-wrapper .users-name {
+		font-weight: 400;
+		font-size: 20px;
+		line-height: 125.47%;
+	}
+
+	.my-info-card .owner-type {
+		width: 100%;
+		height: 18px;
+		top: 9px;
+	}
+
+	.my-info-card .profile-img {
+		position: absolute;
+		width: 140px;
+		height: 140px;
+		top: 40px;
+	}
+
+	.my-info-card .owner-type li:last-child {
+		font-size: 9px;
+	}
+
+	.audi-section-3 {
+		min-height: 300px;
+	}
+
+	.audi-section-3 .right-portion .type {
+		font-size: 9px;
+		line-height: 160%;
+	}
+
+	.audi-section-3 .right-portion .count {
+		font-size: 10px;
+	}
+
+	.audi-section-3 .left-portion .heading {
+		font-size: 16px;
+		line-height: 24px;
+	}
+
+	.audi-section-3 .left-portion .description {
+		font-size: 12px;
+	}
+}
+@media only screen and (min-width: 601px) and (max-width: 1199px) {
+	.my-info-card.audi-section .bio-wrapper {
+		left: 8%;
+	}
+
+	.about-creators {
+		position: relative !important;
+	}
+
+	.audi-section-4 .slider-image {
+		width: 180px;
+		height: 220px;
+	}
+
+	.audi-section-4 .slider-image.search-img-icon {
+		height: 190px !important;
+		top: 15px !important;
+	}
+
+	.about-creators .top-left-part .user-image {
+		width: 16px;
+		height: 16px;
+	}
+
+	.about-creators .top-left-part .heading {
+		font-size: 14px;
+		line-height: 20px;
+		width: 135px;
+	}
+
+	.token-info-content {
+		width: 150px;
+		text-align: center;
+	}
+
+	.bottom-token-info {
+		top: 130px;
+		width: 150px;
+		left: 15px;
+		height: 50px;
+	}
+
+	.token-info-content li {
+		font-family: "Inter";
+		font-style: normal;
+		font-weight: 500;
+		font-size: 10px;
+		line-height: 15px;
+	}
+
+	.audi-section-4 .row-min-ht {
+		min-height: 190px;
+	}
+}
+.my-info-card.creator-section .bio-wrapper {
+	background-color: #ffffff;
+	margin-left: -7px;
+	padding: 20px;
+	border-top-right-radius: 24px;
+	border-bottom-right-radius: 24px;
+	width: 301px;
+	height: 234px;
+	background-image: url(../svg/creatordash/ticket-bg.svg);
+	position: absolute;
+}
+
+.my-info-card.creator-section .owner-type {
+	border: 1px solid #000 !important;
+}
+
+.my-info-card.creator-section .owner-type li:last-child {
+	border: 0;
+}
+
+.my-info-card.creator-section .owner-type li:first-child {
+	backdrop-filter: blur(0px);
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1199px) {
+	.audi-section-4 .slider-image.search-img-icon {
+		height: 190px !important;
+		top: 15px !important;
+	}
+}
+@media only screen and (min-width: 1199px) {
+	.my-info-card.creator-section .bio-wrapper {
+		margin-left: -61px;
+	}
+}
+.fr-section-1 {
+	min-height: 520px;
+	height: 100%;
+	background-image: url(../svg/Fractionalize/fr-section-1-bg.png);
+}
+
+.fr-section-7 {
+	min-height: 520px;
+	height: 100%;
+	background-image: url(../svg/Fractionalize/fr-section-7.svg);
+}
+
+.fr-section-2 {
+	min-height: 1320px;
+	height: 100%;
+	background-image: url(../svg/Fractionalize/fr-section-2-bg.svg);
+}
+
+.fr-section-2 .description {
+	font-family: "Gloria Hallelujah";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 32px;
+	line-height: 122.74%;
+	text-align: center;
+	color: #3D3D3D;
+	transform: matrix(0.99, -0.14, 0.14, 0.99, 0, 0);
+	width: 410.73px;
+	height: 117px;
+}
+
+.fr-section-7 .heading {
+	width: 480px;
+	height: 96px;
+	font-family: "Reckless Neue";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 40px;
+	line-height: 48px;
+	color: #FFFFFF;
+}
+
+.fr-section-7 .buy-now-additional-prop {
+	box-shadow: 2px 4px #000000, 2px 4px 0 1px #FFFFFF;
+	font-family: "Inter";
+	font-style: normal;
+	font-weight: 500;
+	font-size: 20px;
+	line-height: 24px;
+	letter-spacing: 0.065em;
+	color: #FFFFFF;
+	width: 264px;
+	height: 64px;
+	position: relative;
+	top: 8px;
+}
+
+.fr-section-7 .left-portion {
+	position: relative;
+	top: 51px;
+}
+
+.fr-section-7 .right-portion {
+	position: relative;
+	top: 167px;
+}
+
+.rs-container * {
+	box-sizing: border-box;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.rs-container {
+	font-family: Arial, Helvetica, sans-serif;
+	height: 45px;
+	position: relative;
+}
+
+.rs-container .rs-bg, .rs-container .rs-selected {
+	background-color: #764CC2;
+	border: 2.5px solid #764CC2;
+	height: 0px;
+	left: 0;
+	position: absolute;
+	top: 5px;
+	width: 100%;
+	border-radius: 3px;
+}
+
+.rs-container .rs-selected {
+	background-color: #764CC2;
+	border: 1px solid #764CC2;
+	transition: all 0.2s linear;
+	width: 0;
+}
+
+.rs-container.disabled .rs-selected {
+	background-color: #ccc;
+	border-color: #bbb;
+}
+
+.rs-container .rs-pointer {
+	border: 1px solid #764CC2;
+	cursor: pointer;
+	transition: all 0.2s linear;
+	-webkit-appearance: none;
+	appearance: none;
+	width: 30px;
+	height: 30px;
+	background: #764CC2;
+	border-radius: 50%;
+	cursor: pointer;
+	position: relative;
+	top: -10px;
+}
+
+.rs-container.disabled .rs-pointer {
+	border-color: #ccc;
+}
+
+.rs-container .rs-pointer::after {
+	left: auto;
+	right: 12px;
+}
+
+.rs-container.disabled .rs-pointer {
+	cursor: default;
+}
+
+.rs-container.sliding .rs-selected,
+.rs-container.sliding .rs-pointer {
+	transition: none;
+}
+
+.rs-container .rs-scale {
+	left: 0;
+	position: absolute;
+	top: 5px;
+	white-space: nowrap;
+}
+
+.rs-container .rs-scale span {
+	float: left;
+	position: relative;
+}
+
+.rs-container .rs-scale span::before {
+	background-color: #B4AEAE;
+	content: "";
+	height: 20px;
+	left: 0;
+	position: absolute;
+	top: -8px;
+	width: 1px;
+}
+
+span.activePointer::before {
+	background-color: #B4AEAE;
+	content: attr(data-earnings) !important;
+	height: 100px !important;
+	left: 0;
+	position: absolute;
+	top: -100px !important;
+	width: 1px;
+	font-family: "Inter";
+	font-style: normal;
+	font-weight: 500;
+	font-size: 24px;
+	line-height: 29px;
+	text-align: center;
+	text-transform: capitalize;
+	color: #764CC2;
+}
+
+.rs-container.rs-noscale span::before {
+	display: none;
+}
+
+.rs-container.rs-noscale span:first-child::before,
+.rs-container.rs-noscale span:last-child::before {
+	display: block;
+}
+
+.rs-container .rs-scale span:last-child {
+	margin-left: -1px;
+	width: 0px;
+}
+
+.rs-container .rs-scale span ins {
+	color: #333;
+	display: inline-block;
+	font-size: 12px;
+	margin-top: 20px;
+	text-decoration: none;
+}
+
+.rs-container.disabled .rs-scale span ins {
+	color: #999;
+}
+
+.rs-tooltip {
+	color: #333;
+	width: auto;
+	min-width: 60px;
+	height: 30px;
+	position: relative;
+	background: #fff;
+	border: 1px solid #00969b;
+	border-radius: 3px;
+	position: absolute;
+	transform: translate(-50%, -35px);
+	left: 13px;
+	text-align: center;
+	font-size: 13px;
+	padding: 6px 10px 0;
+}
+
+.rs-container.disabled .rs-tooltip {
+	border-color: #ccc;
+	color: #999;
+}
+
+.rs-transparent-rectangle {
+	position: absolute;
+	width: 262px;
+	height: 31px;
+	left: -130px;
+	top: -13px;
+	background: rgba(180, 151, 234, 0.49);
+	border-radius: 4px;
 }
 
 /* 
@@ -12520,7 +13026,7 @@ body {
 	}
 
 	.cr-section-2 .bottom-token-info {
-		top: 154px !important;
+		top: 200px !important;
 		left: 20px !important;
 		height: 44px;
 	}
