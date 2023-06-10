@@ -12435,7 +12435,7 @@ body {
 
 span.activePointer::before {
 	background-color: #B4AEAE;
-	content: attr(data-earnings) !important;
+	content: "";
 	height: 100px !important;
 	left: 0;
 	position: absolute;

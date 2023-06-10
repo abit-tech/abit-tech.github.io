@@ -38,7 +38,16 @@
                 text-transform: capitalize;
                 color: #764CC2;
                 position: relative;
-                left: 30px;
+                left: -2px;
+             }
+             .video-count {
+                font-family: 'Inter';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 12px;
+                /* line-height: 140.5%; */
+                color: #565656;
+                width: 470px;
              }
         </style>
     </head>
@@ -85,11 +94,23 @@
               </div>
           
               <div id="collapseOne2" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion2"  style="height: 400px;">
-                <p class="forecast-description" >The more it views, the more you earn.
-                    Explore potential earnings for this new video by Dan Mace. 
-                    Use the slider to see how much you could earn.</p>
-                <div class="forecast-earning" style="padding: 0px 20px;">
-                    <span class="circle"></span><span class="our-forecast"><i>Our Forecast</i></span>
+                <div class="row">
+                    <div class="col-md-7">
+                        <p class="forecast-description" >The more it views, the more you earn.
+                            Explore potential earnings for this new video by Dan Mace. 
+                            Use the slider to see how much you could earn.
+                        </p>
+                        <div class="forecast-earning" style="padding: 0px 20px;">
+                            <span class="circle"></span><span class="our-forecast"><i>Our Forecast</i></span>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="video-count" class="video-count">Number of Videos Uploaded:</label>
+                            <input type="number" class="form-control" id="video-count" value="4" step="1" min="0" required style="border: 1px solid #ced4da;">
+                            <div class="invalid-feedback">Maximum 4 videos allowed.</div>
+                        </div>
+                    </div>
                 </div>
                 <div class="card-body pt-0" style="position: relative; top: 150px;">
                     <div class="result-with-text"></div>
@@ -100,7 +121,7 @@
               </div>
             </div>
           </div>
-    </div>
+        </div>
     <footer class="mt-4 section-footer border-top">
 		<div class="container" style="margin-top: 76px;">
 			<div class="row">
@@ -158,59 +179,38 @@
                             'top': '-100px'
 
                         })
-                        calculateAudienceEarnings(activeSpan);
-                    }
-                });
-
-                var slider3 = new rSlider({
-                    target: '#slider3',
-                    values: {min: 0, max: 100},
-                    step: 10,
-                    range: true,
-                    set: [10, 40],
-                    scale: true,
-                    labels: false,
-                    onChange: function (vals) {
-                        console.log(vals);
-                    }
-                });
-
-                var slider = new rSlider({
-                    target: '#slider',
-                    values: [2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015],
-                    range: true,
-                    set: [2010, 2013],
-                    onChange: function (vals) {
-                        console.log(vals);
+                        calculateEarnings();
+                        
+                        //calculateAudienceEarnings(activeSpan);
                     }
                 });
             };
+
             window.onload = init;
 
+            var videoCountInput = document.getElementById('video-count');
+                videoCountInput.addEventListener('keyup', function () {
+                    calculateEarnings();
+             });
 
+            function calculateEarnings() {
+               // validateVideoCount();
 
-             // Update audience earnings on input change
-            $('#earningsPerView, #slider2, #ownershipPercentage').on('input', calculateAudienceEarnings);
+                var valueInK = $('#slider2').val();
+                var videosEarning = parseInt(valueInK.split("k")[0]) * 1000;
 
-            // Calculate audience earnings
-            function calculateAudienceEarnings(activeElem) {
-                debugger;
-            var valueInK = $('#slider2').val();
-            var views = parseInt(valueInK.split("k")[0]) * 1000;
-            //var views = parseInt($('#slider2').val());
-            var percentage = parseFloat(0.24) / 100;
-            var earningsPerView = parseFloat(0.005);
-            var audienceEarnings = (views * earningsPerView) * percentage;
-            $('.result-with-text').html(`<div class="total-earning">$${audienceEarnings.toFixed(2)}</div><span>Annualized Payout est.</span>`);
-          
-            $(activeElem).attr("data-earnings", "$" + audienceEarnings.toFixed(2));
+              //  var adRevenue = parseFloat(document.getElementById('ad-revenue').value);
+                var videoCount = parseInt(document.getElementById('video-count').value);
 
-            $('#audienceEarnings').val('$' + audienceEarnings.toFixed(2));
-            }
+                if (videoCount <= 4) {
+                    var earnings = (videosEarning * videoCount * 3).toFixed(2);
+                    $('.result-with-text').html(`<div class="total-earning">$${parseFloat(earnings).toFixed(2)}</div><span>Monthly aBit Payouts.</span>`);
 
-            // Format number with commas
-            function formatNumber(number) {
-            return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                  //  document.getElementById('earnings').textContent = 'Creator Earnings: $' + earnings;
+                } else {
+                    var earnings = (videosEarning * 4 * 3).toFixed(2);
+                    $('.result-with-text').html(`<div class="total-earning">$${parseFloat(earnings).toFixed(2)}</div><span>Monthly aBit Payouts.</span>`);
+                }
             }
         })();
     </script>
