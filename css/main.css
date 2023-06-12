@@ -10568,7 +10568,7 @@ footer.section-footer .list-group li {
 }
 
 .home-section-2 .about-creators {
-	position: absolute;
+	position: absolute !important;
 	top: 0;
 }
 
@@ -11573,6 +11573,7 @@ body {
 	footer.section-footer .heading {
 		font-size: 20px;
 		line-height: 20px;
+		top: 3px;
 	}
 
 	footer.section-footer .container {

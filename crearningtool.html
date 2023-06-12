@@ -17,6 +17,12 @@
             }
             .forecast-earning .our-forecast {
                 margin-left: 25px;
+                font-family: 'Inter';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 140.5%;
+                color: #565656;
             }
             .forecast-description {
                 font-family: 'Inter';
@@ -48,6 +54,37 @@
                 /* line-height: 140.5%; */
                 color: #565656;
                 width: 470px;
+             }
+
+             @media only screen and (max-width: 600px) { 
+                .cstm-collapse {
+                    height: 100%;
+                    min-height: 520px;
+                }
+                .forecast-description {
+                    width: 100%;
+                    font-size: 12px;
+                }
+                .forecast-earning {
+                    padding: 0 16px;
+                } 
+                .no-of-videos-upload {
+                    width: 90%;
+                    margin: 0 16px;
+                }
+                .forecast-earning .circlecast-earning .our-forecast { 
+                    width: 16px;
+                    height: 16px;
+                }
+                .forecast-earning .circlecast-earning .our-forecast {
+                    position: relative;
+                    top: -6px;
+                    font-size: 12px;
+                }
+                .rs-transparent-rectangle {
+                    width: 162px;
+                    left: -70px;
+                }
              }
         </style>
     </head>
@@ -93,7 +130,7 @@
                 </h5>
               </div>
           
-              <div id="collapseOne2" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion2"  style="height: 400px;">
+              <div id="collapseOne2" class="collapse show cstm-collapse" aria-labelledby="headingOne" data-parent="#accordion2"  style="height: 400px;">
                 <div class="row">
                     <div class="col-md-7">
                         <p class="forecast-description" >The more it views, the more you earn.
@@ -104,7 +141,7 @@
                             <span class="circle"></span><span class="our-forecast"><i>Our Forecast</i></span>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-4 no-of-videos-upload">
                         <div class="form-group">
                             <label for="video-count" class="video-count">Number of Videos Uploaded:</label>
                             <input type="number" class="form-control" id="video-count" value="4" step="1" min="0" required style="border: 1px solid #ced4da;">
