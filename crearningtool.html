@@ -53,7 +53,11 @@
                 font-size: 12px;
                 /* line-height: 140.5%; */
                 color: #565656;
-                width: 470px;
+                width: 60%;
+
+             }
+             #video-count {
+                width: 60%;
              }
 
              @media only screen and (max-width: 600px) { 
@@ -122,7 +126,7 @@
               <div class="card-header text-left" id="headingOne">
                 <h5 class="mb-0">
                   <button class="btn p-0 shadow-none" data-toggle="collapse" data-target="#collapseOne2f" aria-expanded="true" aria-controls="collapseOne">
-                    Forecast your earnings.
+                    aBit gains
                  </button>
                   <img src="svg/icons/plus-circle-icon.svg" alt="plusicon" class="float-right plus-icon d-none toggle-icon">
                   <img src="svg/icons/minus-icon.svg" alt="minuscon" class="float-right minus-icon  toggle-icon">
@@ -130,29 +134,40 @@
                 </h5>
               </div>
           
-              <div id="collapseOne2" class="collapse show cstm-collapse" aria-labelledby="headingOne" data-parent="#accordion2"  style="height: 400px;">
+              <div id="collapseOne2" class="collapse show cstm-collapse" aria-labelledby="headingOne" data-parent="#accordion2"  style="height: 480px;">
                 <div class="row">
                     <div class="col-md-7">
-                        <p class="forecast-description" >The more it views, the more you earn.
-                            Explore potential earnings for this new video by Dan Mace. 
-                            Use the slider to see how much you could earn.
+                        <p class="forecast-description" >Looks like we have your attention! :)
+                            You can use the following tool to predict your monthly earnings with aBit!
+                            Pen down, how many videos do you upload in a month? 
+                            
+                            Use the slider to indicate how much you earn per video:
                         </p>
-                        <div class="forecast-earning" style="padding: 0px 20px;">
+                        <!-- <div class="forecast-earning" style="padding: 0px 20px;">
                             <span class="circle"></span><span class="our-forecast"><i>Our Forecast</i></span>
+                        </div> -->
+                        <div class="form-group" style="margin-left: 24px;">
+                            <label for="video-count" class="video-count">Monthly Video Uploads:</label>
+                            <input type="number" class="form-control" id="video-count" value="4" step="1" min="0" required style="border: 1px solid #ced4da;">
+                            <div class="invalid-feedback">Maximum 4 videos allowed.</div>
                         </div>
                     </div>
-                    <div class="col-md-4 no-of-videos-upload">
+                    <!-- <div class="col-md-4 no-of-videos-upload">
                         <div class="form-group">
                             <label for="video-count" class="video-count">Number of Videos Uploaded:</label>
                             <input type="number" class="form-control" id="video-count" value="4" step="1" min="0" required style="border: 1px solid #ced4da;">
                             <div class="invalid-feedback">Maximum 4 videos allowed.</div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
-                <div class="card-body pt-0" style="position: relative; top: 150px;">
+                <div class="card-body pt-0" style="position: relative; top: 130px;">
                     <div class="result-with-text"></div>
                     <div class="slider-container">
                         <input type="text" id="slider2" class="slider" />
+                    </div>
+
+                    <div class="text-center pt-2">
+                        Avg. Video Earnings -->
                     </div>
 				</div>
               </div>
@@ -195,11 +210,11 @@
 
                 var slider2 = new rSlider({
                     target: '#slider2',
-                    values: ['5k', '10k', '15k', '20k', '25k', '30k', '35k', '40k', '45k', '50k', '55k', '60k', '65k', '70k', '75k', '80k', '85k', '90k', '95k', '100k'],
+                    values: ['1k', '5k', '10k', '15k', '20k', '25k', '30k', '35k',  '40k', '45k', '50k'],
                     range: false,
-                    set: ['50k'],
+                    set: ['25k'],
                     tooltip: false,
-                    labels: false,
+                    labels: true,
                     onChange: function (vals, activePointer) {
 
                         console.log(vals);
