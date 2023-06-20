@@ -279,7 +279,6 @@ define(function () { 'use strict';
 
 			this.timeout = setTimeout(function () {
 				if (_this.conf.onChange && typeof _this.conf.onChange === 'function') {		
-					debugger;	
 					return _this.conf.onChange(_this.input.value, _this.values.end);
 				}
 			}, 500);

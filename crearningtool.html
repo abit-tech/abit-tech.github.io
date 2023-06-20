@@ -28,10 +28,10 @@
                 font-family: 'Inter';
                 font-style: normal;
                 font-weight: 400;
-                font-size: 16px;
-                line-height: 140.5%;
+                font-size: 14px;
+                line-height: 148.5%;
                 color: #565656;
-                width: 470px; 
+                width: 600px; 
                 padding: 0px 20px;
 
              }
@@ -44,20 +44,43 @@
                 text-transform: capitalize;
                 color: #764CC2;
                 position: relative;
-                left: -2px;
+                left: 15px;
              }
              .video-count {
                 font-family: 'Inter';
                 font-style: normal;
-                font-weight: 400;
                 font-size: 12px;
                 /* line-height: 140.5%; */
                 color: #565656;
                 width: 60%;
+                font-weight: 600;
+                margin-top: 11px;
 
              }
+             input::-webkit-inner-spin-button { 
+                display: none;
+             }
+
              #video-count {
                 width: 60%;
+                height: 24px;
+                position: relative;
+                top: 8px;
+                left: -20px;
+             }
+             .videos-earnings {
+                font-family: 'Inter';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 13px;
+                line-height: 29px;
+                text-transform: capitalize;
+                /* color: #764CC2; */
+                position: absolute;
+                left: 40px;
+             }
+             .cr-common-section.cr-tool .card-header button {
+                font-size: 22px;
              }
 
              @media only screen and (max-width: 600px) { 
@@ -87,7 +110,29 @@
                 }
                 .rs-transparent-rectangle {
                     width: 162px;
-                    left: -70px;
+                    left: -72px;
+                }
+                .cr-common-section.cr-tool .card-header button {
+                    font-size: 18px;
+                    position: relative;
+                    left: 6px;
+                }
+                .result-with-text {
+                    
+                    width: 200px; 
+                }
+                .result-with-text .total-earning {
+                    font-size: 16px;
+                    left: 28px;
+                }
+                .videos-earnings {
+                    font-size: 12px;
+                }
+                .result-with-text span {
+                    margin-left: 15px;
+                }
+                span.activePointer::before {
+                    left: 3px !important;
                 }
              }
         </style>
@@ -111,7 +156,7 @@
 			</div>	
 		</nav>
 	</header>
-    <div class="container mt-5 cr-common-section">
+    <div class="container mt-5 cr-common-section cr-tool">
         <!-- <h3>Range Slider</h3>
 
         <div class="form-group">
@@ -123,32 +168,32 @@
 
           <div id="accordion2" class="mt-5 cstm-accordian">
             <div class="card mb-5 cstm-card" style="width: 80%;">
-              <div class="card-header text-left" id="headingOne">
+              <div class="card-header crearning-tool text-left" id="headingOne" tool="true">
                 <h5 class="mb-0">
-                  <button class="btn p-0 shadow-none" data-toggle="collapse" data-target="#collapseOne2f" aria-expanded="true" aria-controls="collapseOne">
+                  <button class="btn p-0 shadow-none" data-toggle="collapsse" data-target="#" aria-expanded="true" aria-controls="collapseOne">
                     aBit gains
                  </button>
                   <img src="svg/icons/plus-circle-icon.svg" alt="plusicon" class="float-right plus-icon d-none toggle-icon">
-                  <img src="svg/icons/minus-icon.svg" alt="minuscon" class="float-right minus-icon  toggle-icon">
+                  <img src="svg/icons/minus-icon.svg" alt="minuscon" class="float-right minus-icon  toggle-icon d-none">
 
                 </h5>
               </div>
-          
-              <div id="collapseOne2" class="collapse show cstm-collapse" aria-labelledby="headingOne" data-parent="#accordion2"  style="height: 480px;">
+        
+              <div id="collapseOne2s" class="collapse show cstm-collapse" aria-labelledby="headfingOne" data-parent="#accorddion"  style="height: 480px;">
                 <div class="row">
                     <div class="col-md-7">
-                        <p class="forecast-description" >Looks like we have your attention! :)
-                            You can use the following tool to predict your monthly earnings with aBit!
-                            Pen down, how many videos do you upload in a month? 
-                            
+                        <div class="forecast-description" >Looks like we have your attention! :)</div>
+                        <div class="forecast-description" >   You can use the following tool to predict your monthly earnings with aBit!</div>
+                        <div class="forecast-description pt-2">    Pen down, how many videos do you upload in a month? </div>
+                        <div class="forecast-description" >   
                             Use the slider to indicate how much you earn per video:
-                        </p>
+                        </div>
                         <!-- <div class="forecast-earning" style="padding: 0px 20px;">
                             <span class="circle"></span><span class="our-forecast"><i>Our Forecast</i></span>
                         </div> -->
-                        <div class="form-group" style="margin-left: 24px;">
-                            <label for="video-count" class="video-count">Monthly Video Uploads:</label>
-                            <input type="number" class="form-control" id="video-count" value="4" step="1" min="0" required style="border: 1px solid #ced4da;">
+                        <div class="form-group mt-4 row" style="margin-left: 24px;">
+                            <label for="video-count" class="video-count col-md-4 pl-0 col-6">Monthly Video Uploads:</label>
+                            <input type="number" class="form-control col-md-3 col-4" id="video-count" value="4" step="1" min="0" required style="border: 1px solid #ced4da;">
                             <div class="invalid-feedback">Maximum 4 videos allowed.</div>
                         </div>
                     </div>
@@ -160,14 +205,14 @@
                         </div>
                     </div> -->
                 </div>
-                <div class="card-body pt-0" style="position: relative; top: 130px;">
+                <div class="card-body pt-0" style="position: relative; top: 120px;">
                     <div class="result-with-text"></div>
-                    <div class="slider-container">
+                    <div class="slider-container" style="width: 80%; margin: 0 auto;">
                         <input type="text" id="slider2" class="slider" />
                     </div>
 
-                    <div class="text-center pt-2">
-                        Avg. Video Earnings -->
+                    <div class="text-center pt-2" style="font-size: 12px; margin-top: -15px;">
+                        Avg. Video Earnings($) 
                     </div>
 				</div>
               </div>
@@ -196,40 +241,67 @@
 
 	<script src="js/rSlider.js"></script>
     <script src="js/loadExtLibrary.js"></script>
-	<script src="js/main.js"></script> 
-
-    <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script> -->
+	<script src="js/main.js"></script>
 
     <script>
         (function () {
             'use strict';
 
-            var init = function () {                
+            var init = function () {  
+                function generateArray(start, end, step) {
+                const array = [];
+                for (var i = start; i <= end; i += step) {
+                    if(i == 20000) {
+                         i = convertIntoK(i)
+                    }
+                    array.push("$" + i);
+                }
+                return array;
+                }
+                const startValue = 100;
+                const endValue = 20000;
+                const stepSize = 10;
 
+                const resultArray = generateArray(startValue, endValue, stepSize);
+                console.log(resultArray);              
+
+
+                function convertIntoK(value) {
+                  //  if(value == 20000) {
+                        let valueInK = "20000".slice(0, -3) + 'k';
+                        return valueInK;
+                        //console.log(str2);
+                 //   }
+                }
+
+               
                 var slider2 = new rSlider({
                     target: '#slider2',
-                    values: ['1k', '5k', '10k', '15k', '20k', '25k', '30k', '35k',  '40k', '45k', '50k'],
+                    values: resultArray, //['1k', '5k', '10k', '15k', '20k', '25k', '30k', '35k',  '40k', '45k', '50k'],
                     range: false,
-                    set: ['25k'],
+                    set: ["$10000"],
                     tooltip: false,
-                    labels: true,
+                    labels: false,
+                    scale: false,
                     onChange: function (vals, activePointer) {
 
                         console.log(vals);
-                        debugger
                         let activeSpan =  $('.rs-scale').find("span")[activePointer];
                         $('.rs-scale').find("span").removeClass("activePointer");
                         $('.rs-scale').find("span .rs-transparent-rectangle").remove();
-                        $(activeSpan).append(`<div class="rs-transparent-rectangle"></div>`);
+                      //  $(activeSpan).append(`<div class="rs-transparent-rectangle"></div>`);
                         $(activeSpan).addClass("activePointer");
+                        let pos;
+                        if ($(window).width() < 460) {
+                            pos = ($(activeSpan).position().left) - 30;
+                        } else {
+                            pos = ($(activeSpan).position().left + 25);
+                        }
                        // $(activeSpan).attr("data-earnings", 4.80);
                        $('.result-with-text').css({
                             'position': 'relative',
-                            'left':  ($(activeSpan).position().left - 60),
+                            'left':  pos, //($(activeSpan).position().left + 25 ),
                             'top': '-100px'
-
                         })
                         calculateEarnings();
                         
@@ -247,16 +319,22 @@
 
             function calculateEarnings() {
                // validateVideoCount();
+                var valueInDollar = $('#slider2').val();
 
-                var valueInK = $('#slider2').val();
-                var videosEarning = parseInt(valueInK.split("k")[0]) * 1000;
+                var videosEarning = parseInt(valueInDollar.split("$")[1]); //* 1000;
+               if(videosEarning == 20) {
+                    videosEarning = videosEarning * 1000;
+               }
+               
+
 
               //  var adRevenue = parseFloat(document.getElementById('ad-revenue').value);
                 var videoCount = parseInt(document.getElementById('video-count').value);
 
                 if (videoCount <= 4) {
                     var earnings = (videosEarning * videoCount * 3).toFixed(2);
-                    $('.result-with-text').html(`<div class="total-earning">$${parseFloat(earnings).toFixed(2)}</div><span>Monthly aBit Payouts.</span>`);
+                    earnings = seperateNumerWithComma(earnings);
+                    $('.result-with-text').html(`<div class="total-earning">$${earnings}</div><span>Monthly aBit Payouts.</span><div class="videos-earnings">$${seperateNumerWithComma(videosEarning)}</div>`);
 
                   //  document.getElementById('earnings').textContent = 'Creator Earnings: $' + earnings;
                 } else {
@@ -264,6 +342,13 @@
                     $('.result-with-text').html(`<div class="total-earning">$${parseFloat(earnings).toFixed(2)}</div><span>Monthly aBit Payouts.</span>`);
                 }
             }
+            function seperateNumerWithComma(num) {
+               // let n = 234234234;
+
+                   num = Number(parseFloat(num).toFixed(0))
+                    let str = num.toLocaleString("en-US");       
+                    return str;
+                }
         })();
     </script>
 </body>

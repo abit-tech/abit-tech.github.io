@@ -15709,7 +15709,6 @@ define(function () { 'use strict';
 
 			this.timeout = setTimeout(function () {
 				if (_this.conf.onChange && typeof _this.conf.onChange === 'function') {		
-					debugger;	
 					return _this.conf.onChange(_this.input.value, _this.values.end);
 				}
 			}, 500);
@@ -15896,6 +15895,9 @@ define(function () { 'use strict';
 	}
 
 	function toggleAccordian(elem) {
+	  debugger
+	  if($(this).attr("tool") == undefined) {
+
 	  let nextSibling = $(this).next(".collapse");
 	  // let status = $(this).closest(".cstm-accordian").find(".collapse").hasClass("show");
 	  // if(status) {
@@ -15905,6 +15907,7 @@ define(function () { 'use strict';
 	  $(nextSibling).toggleClass("show");
 
 	  $(this).find("img.toggle-icon").toggleClass("d-none");
+	}
 	}
 
 	$(function(){
