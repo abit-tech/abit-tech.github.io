@@ -12438,7 +12438,6 @@ span.activePointer::before {
 	background-color: #B4AEAE;
 	content: "";
 	height: 100px !important;
-	left: 1px !important;
 	position: absolute;
 	top: -100px !important;
 	width: 1px;

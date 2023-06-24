@@ -7,6 +7,16 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/regular.min.css" integrity="sha512-WidMaWaNmZqjk3gDE6KBFCoDpBz9stTsTZZTeocfq/eDNkLfpakEd7qR0bPejvy/x0iT0dvzIq4IirnBtVer5A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="shortcut icon" href="svg/favicon.svg" type="image/x-icon">
 
+        <!-- Google tag (gtag.js) -->
+            <script async src="https://www.googletagmanager.com/gtag/js?id=G-M2C1G7D2PW"></script>
+            <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-M2C1G7D2PW');
+            </script>
+
         <style>
             .forecast-earning .circle {
                 position: absolute;
@@ -193,7 +203,7 @@
                         </div> -->
                         <div class="form-group mt-4 row" style="margin-left: 24px;">
                             <label for="video-count" class="video-count col-md-4 pl-0 col-6">Monthly Video Uploads:</label>
-                            <input type="number" class="form-control col-md-3 col-4" id="video-count" value="4" step="1" min="0" required style="border: 1px solid #ced4da;">
+                            <input type="number" class="form-control col-md-3 col-4" id="video-count" value="1" step="1" min="0" required style="border: 1px solid #ced4da;">
                             <div class="invalid-feedback">Maximum 4 videos allowed.</div>
                         </div>
                     </div>
@@ -332,14 +342,14 @@
                 var videoCount = parseInt(document.getElementById('video-count').value);
 
                 if (videoCount <= 4) {
-                    var earnings = (videosEarning * videoCount * 3).toFixed(2);
+                    var earnings = (videosEarning * videoCount * 3).toFixed(0);
                     earnings = seperateNumerWithComma(earnings);
                     $('.result-with-text').html(`<div class="total-earning">$${earnings}</div><span>Monthly aBit Payouts.</span><div class="videos-earnings">$${seperateNumerWithComma(videosEarning)}</div>`);
 
                   //  document.getElementById('earnings').textContent = 'Creator Earnings: $' + earnings;
                 } else {
-                    var earnings = (videosEarning * 4 * 3).toFixed(2);
-                    $('.result-with-text').html(`<div class="total-earning">$${parseFloat(earnings).toFixed(2)}</div><span>Monthly aBit Payouts.</span>`);
+                    var earnings = (videosEarning * 4 * 3).toFixed(0);
+                    $('.result-with-text').html(`<div class="total-earning">$${parseFloat(earnings).toFixed(2)}</div><span>Monthly aBit Payouts.</span><div class="videos-earnings">$${seperateNumerWithComma(videosEarning)}</div>`);
                 }
             }
             function seperateNumerWithComma(num) {

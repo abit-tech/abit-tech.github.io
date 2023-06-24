@@ -224,7 +224,6 @@ define(function () { 'use strict';
 
 			if (this.conf.range && this.values.start > this.values.end)
 				this.values.start = this.values.end;
-
 			this.pointerL.style.left = (this.values[activePointer] * this.step - (this.pointerWidth / 2)) + 'px';
 
 			if (this.conf.range) {
