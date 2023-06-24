@@ -12519,6 +12519,21 @@ span.activePointer::before {
 	border-radius: 4px;
 }
 
+@media only screen and (min-width: 1306px) and (max-width: 1360px) {
+	span.activePointer::before {
+		left: 4px !important;
+	}
+}
+@media only screen and (min-width: 1599px) and (max-width: 1640px) {
+	span.activePointer::before {
+		left: 5px !important;
+	}
+}
+@media only screen and (min-width: 1910px) and (max-width: 1940px) {
+	span.activePointer::before {
+		left: 7px !important;
+	}
+}
 /* 
     CONGRATULATION MODAL CSS GOES HERE
 */

@@ -97,6 +97,7 @@
 			this.input.parentNode.insertBefore(this.slider, this.input.nextSibling);
 
 	        if (this.conf.width) this.slider.style.width = parseInt(this.conf.width) + 'px';
+			debugger
 			this.sliderLeft = this.slider.getBoundingClientRect().left;
 			this.sliderWidth = this.slider.clientWidth;
 			this.pointerWidth = this.pointerL.clientWidth;
@@ -225,6 +226,7 @@
 
 			if (this.conf.range && this.values.start > this.values.end)
 				this.values.start = this.values.end;
+				
 			this.pointerL.style.left = (this.values[activePointer] * this.step - (this.pointerWidth / 2)) + 'px';
 
 			if (this.conf.range) {
