@@ -133,10 +133,15 @@
                 }
                 .result-with-text .total-earning {
                     font-size: 16px;
-                    left: 28px;
+                    text-align: center;
+                    width: 120px;
+                    left: 0;
                 }
                 .videos-earnings {
                     font-size: 12px;
+                    width: 100px;
+                    text-align: center;
+                    left: 8px;
                 }
                 .result-with-text span {
                     margin-left: 15px;
@@ -287,7 +292,7 @@
                
                 var slider2 = new rSlider({
                     target: '#slider2',
-                    values: resultArray, //['1k', '5k', '10k', '15k', '20k', '25k', '30k', '35k',  '40k', '45k', '50k'],
+                    values:resultArray, //['$10', '$500', '$1000', '$1500', '$2000', '$2500', '$3000', '$3500',  '$4000', '$4500', '50000'],
                     range: false,
                     set: ["$10000"],
                     tooltip: false,
@@ -296,18 +301,27 @@
                     onChange: function (vals, activePointer) {
 
                         console.log(vals);
-                        let activeSpan =  $('.rs-scale').find("span")[activePointer];
-                        $('.rs-scale').find("span").removeClass("activePointer");
-                        $('.rs-scale').find("span .rs-transparent-rectangle").remove();
-                      //  $(activeSpan).append(`<div class="rs-transparent-rectangle"></div>`);
-                        $(activeSpan).addClass("activePointer");
-                        let pos;
-                        if ($(window).width() < 460) {
-                            pos = ($(activeSpan).position().left) - 30;
-                        } else {
-                            pos = ($(activeSpan).position().left + 25);
-                        }
+                        
+                    //     let activeSpan =  $('.rs-scale').find("span")[activePointer];
+                    //     $('.rs-scale').find("span").removeClass("activePointer");
+                    //     $('.rs-scale').find("span .rs-transparent-rectangle").remove();
+                    //   //  $(activeSpan).append(`<div class="rs-transparent-rectangle"></div>`);
+                    //     $(activeSpan).addClass("activePointer");
+                        // let pos;
+                        // if ($(window).width() < 460) {
+                        //     pos = ($(activeSpan).position().left) - 30;
+                        // } else {
+                        //     pos = ($(activeSpan).position().left + 25);
+                        // }
                        // $(activeSpan).attr("data-earnings", 4.80);
+                       
+                       let pos;
+
+                       if ($(window).width() < 460) {
+                            pos = ($(".rs-pointer").position().left) - 8;
+                         } else {
+                            pos = ($(".rs-pointer").position().left) + 38;
+                        }
                        $('.result-with-text').css({
                             'position': 'relative',
                             'left':  pos, //($(activeSpan).position().left + 25 ),
@@ -316,8 +330,23 @@
                         calculateEarnings();
                         
                         //calculateAudienceEarnings(activeSpan);
+                    },
+                    onDrag: function() {
+                        var valueInDollar = $('#slider2').val();
+                        var videosEarning = parseInt(valueInDollar.split("$")[1]); //* 1000;
+                        if(videosEarning == 20) {
+                                videosEarning = videosEarning * 1000;
+                        }
+                        $(".videos-earning").html(videosEarning);
+                    },
+                    onMove: function() {
+                        calculateEarnings();
                     }
                 });
+                
+                debugger;
+               let x =  slider2.getValue();
+               console.log(x)
             };
 
             window.onload = init;
@@ -349,7 +378,7 @@
                   //  document.getElementById('earnings').textContent = 'Creator Earnings: $' + earnings;
                 } else {
                     var earnings = (videosEarning * 4 * 3).toFixed(0);
-                    $('.result-with-text').html(`<div class="total-earning">$${parseFloat(earnings).toFixed(2)}</div><span>Monthly aBit Payouts.</span><div class="videos-earnings">$${seperateNumerWithComma(videosEarning)}</div>`);
+                    $('.result-with-text').html(`<div class="total-earning">$${parseFloat(earnings).toFixed(0)}</div><span>Monthly aBit Payouts.</span><div class="videos-earnings">$${seperateNumerWithComma(videosEarning)}</div>`);
                 }
             }
             function seperateNumerWithComma(num) {

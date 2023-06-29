@@ -15464,7 +15464,8 @@ return jQuery;
 			tooltip:	true,
 			step: 		null,
 			disabled:	false,
-			onChange:	null
+			onChange:	null,
+			onMove: null,
 		};
 
 		this.cls = {
@@ -15524,7 +15525,7 @@ return jQuery;
 		this.input.parentNode.insertBefore(this.slider, this.input.nextSibling);
 
         if (this.conf.width) this.slider.style.width = parseInt(this.conf.width) + 'px';
-		debugger
+		//debugger
 		this.sliderLeft = this.slider.getBoundingClientRect().left;
 		this.sliderWidth = this.slider.clientWidth;
 		this.pointerWidth = this.pointerL.clientWidth;
@@ -15607,6 +15608,7 @@ return jQuery;
 	};
 
 	RS.prototype.drag = function (e) {
+		//debugger;
 		e.preventDefault();
 
 		if (this.conf.disabled) return;
@@ -15615,11 +15617,14 @@ return jQuery;
 		if (dir === 'left') this.activePointer = this.pointerL;
 		if (dir === 'right') this.activePointer = this.pointerR;
 
+		
+
 		return this.slider.classList.add('sliding');
 	};
 
 	RS.prototype.move = function (e) {
 		if (this.activePointer && !this.conf.disabled) {
+			debugger
 			var coordX = e.type === 'touchmove' ? e.touches[0].clientX : e.pageX,
 				index = coordX - this.sliderLeft - (this.pointerWidth / 2);
 
@@ -15633,7 +15638,8 @@ return jQuery;
 				if (this.activePointer === this.pointerR) this.values.end = index;
 			}
 			else this.values.end = index;
-
+			this.conf.onMove();
+			
 			return this.setValues();
 		}
 	};
@@ -15643,6 +15649,7 @@ return jQuery;
 	};
 
 	RS.prototype.setValues = function (start, end) {
+		debugger;
 		var activePointer = this.conf.range ? 'start' : 'end';
 
 		if (start && this.conf.values.indexOf(start) > -1)
@@ -15653,9 +15660,16 @@ return jQuery;
 
 		if (this.conf.range && this.values.start > this.values.end)
 			this.values.start = this.values.end;
-			
-		this.pointerL.style.left = (this.values[activePointer] * this.step - (this.pointerWidth / 2)) + 'px';
 
+		let sliderActualWidth = (this.slider.offsetWidth + 13)/2;
+		let x = (this.values[activePointer] * this.step - (this.pointerWidth / 2));
+		if(sliderActualWidth > x) {
+			this.pointerL.style.left = (this.values[activePointer] * this.step - (this.pointerWidth / 2)) + 20 + 'px';
+		} else {
+			this.pointerL.style.left = (this.values[activePointer] * this.step - (this.pointerWidth / 2)) + 'px';
+		}
+
+		
 		if (this.conf.range) {
 			if (this.conf.tooltip) {
 				this.tipL.innerHTML = this.conf.values[this.values.start];
@@ -15672,7 +15686,7 @@ return jQuery;
 
 		if (this.values.end > this.conf.values.length - 1) this.values.end = this.conf.values.length - 1;
 		if (this.values.start < 0) this.values.start = 0;
-
+		
 		this.selected.style.width = (this.values.end - this.values.start) * this.step + 'px';
 		this.selected.style.left = this.values.start * this.step + 'px';		
 		

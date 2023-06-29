@@ -12487,6 +12487,17 @@ span.activePointer::before {
 	color: #999;
 }
 
+.rs-pointer::before {
+	background-color: #B4AEAE;
+	content: "";
+	height: 70px;
+	left: 13px;
+	position: absolute;
+	top: -66px;
+	width: 1px;
+	z-index: -1;
+}
+
 .rs-tooltip {
 	color: #333;
 	width: auto;
