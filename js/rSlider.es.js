@@ -95,7 +95,6 @@
 		this.input.parentNode.insertBefore(this.slider, this.input.nextSibling);
 
         if (this.conf.width) this.slider.style.width = parseInt(this.conf.width) + 'px';
-		//debugger
 		this.sliderLeft = this.slider.getBoundingClientRect().left;
 		this.sliderWidth = this.slider.clientWidth;
 		this.pointerWidth = this.pointerL.clientWidth;
@@ -178,7 +177,6 @@
 	};
 
 	RS.prototype.drag = function (e) {
-		//debugger;
 		e.preventDefault();
 
 		if (this.conf.disabled) return;
@@ -194,7 +192,6 @@
 
 	RS.prototype.move = function (e) {
 		if (this.activePointer && !this.conf.disabled) {
-			debugger
 			var coordX = e.type === 'touchmove' ? e.touches[0].clientX : e.pageX,
 				index = coordX - this.sliderLeft - (this.pointerWidth / 2);
 
@@ -219,7 +216,6 @@
 	};
 
 	RS.prototype.setValues = function (start, end) {
-		debugger;
 		var activePointer = this.conf.range ? 'start' : 'end';
 
 		if (start && this.conf.values.indexOf(start) > -1)
@@ -231,13 +227,16 @@
 		if (this.conf.range && this.values.start > this.values.end)
 			this.values.start = this.values.end;
 
-		let sliderActualWidth = (this.slider.offsetWidth + 13)/2;
-		let x = (this.values[activePointer] * this.step - (this.pointerWidth / 2));
-		if(sliderActualWidth > x) {
-			this.pointerL.style.left = (this.values[activePointer] * this.step - (this.pointerWidth / 2)) + 20 + 'px';
-		} else {
+		// let sliderActualWidth = (this.slider.offsetWidth + 13)/2;
+		// let x = (this.values[activePointer] * this.step - (this.pointerWidth / 2));
+
+
+		// if(sliderActualWidth > x) {
+		// 	this.pointerL.style.left = (this.values[activePointer] * this.step - (this.pointerWidth / 2)) + 20 + 'px';
+		// } else {
+		// 	this.pointerL.style.left = (this.values[activePointer] * this.step - (this.pointerWidth / 2)) + 'px';
+		// }
 			this.pointerL.style.left = (this.values[activePointer] * this.step - (this.pointerWidth / 2)) + 'px';
-		}
 
 		
 		if (this.conf.range) {

@@ -317,9 +317,14 @@
                        
                        let pos;
 
-                       if ($(window).width() < 460) {
+                       if ($(window).width() <= 390) {
+                            pos = ($(".rs-pointer").position().left) - 15;
+                         } else if(($(window).width() > 390) && ($(window).width() < 500)) {
                             pos = ($(".rs-pointer").position().left) - 8;
-                         } else {
+                         } else if(($(window).width() >= 768) && ($(window).width() < 991)) {
+                            pos = ($(".rs-pointer").position().left) + 20;
+                         }
+                            else {
                             pos = ($(".rs-pointer").position().left) + 38;
                         }
                        $('.result-with-text').css({
@@ -340,11 +345,22 @@
                         $(".videos-earning").html(videosEarning);
                     },
                     onMove: function() {
+                        let pos;
+
+                        if ($(window).width() < 460) {
+                            pos = ($(".rs-pointer").position().left) - 8;
+                        } else {
+                            pos = ($(".rs-pointer").position().left) + 38;
+                        }
+                        $('.result-with-text').css({
+                            'position': 'relative',
+                            'left':  pos, //($(activeSpan).position().left + 25 ),
+                            'top': '-100px'
+                        })
                         calculateEarnings();
                     }
                 });
                 
-                debugger;
                let x =  slider2.getValue();
                console.log(x)
             };
