@@ -15891,9 +15891,9 @@
 	  $.ajax({
 	    url: "https://abit-backend-production.up.railway.app/api/waitlist",
 	    type: 'POST',
-	    data: {
-	      "email": JSON.stringify($(input).val())
-	    },
+	    data: JSON.stringify({
+	      'email': $(input).val()
+	    }),
 	    contentType: "application/json; charset=utf-8",
 	    success: function (data) {
 	      $(input).val("");
@@ -15910,7 +15910,6 @@
 	}
 
 	function toggleAccordian(elem) {
-	  debugger
 	  if($(this).attr("tool") == undefined) {
 
 	  let nextSibling = $(this).next(".collapse");
