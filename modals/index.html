@@ -1,19 +1,38 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Copy Me</title>
-	<link rel="stylesheet" type="text/css" href="css/main.css">
+  <title>Scroll to Page End Modal</title>
+  <!-- Add your CSS and jQuery library links here -->
 </head>
 <body>
-	<h1>Copy Me</h1>
+  <!-- Your website content goes here -->
 
-	<p>Anything you put in the <code>copy</code> directory gets copied as-is into the <code>dist</code> directory.</p>
+  <!-- Modal HTML structure -->
+  <div id="myModal" style="display: none;">
+    <div id="modalContent">
+      <!-- Your modal content goes here -->
+      <h2>Modal Content</h2>
+      <p>This is the content of the modal.</p>
+    </div>
+  </div>
 
-	<p><button id="click-me">Click Me</button></p>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    // JavaScript code to show modal when scroll reaches the page end
+    $(window).scroll(function() {
+      const modal = $('#myModal');
+      const scrollableHeight = $(document).height() - $(window).height();
+      const scrollPosition = $(window).scrollTop();
 
-	<!-- Scripts -->
-	<script src="js/detects.js"></script>
-	<script src="js/another-file.js"></script>
-	<script src="js/main.polyfills.js"></script>
+      // Show the modal when scroll reaches the bottom of the page
+      if (scrollPosition >= scrollableHeight) {
+        modal.show();
+        // Optionally, you can add a class to the modal to style it, e.g., modal.addClass('show');
+      } else {
+        modal.hide();
+        // Optionally, you can remove the class from the modal, e.g., modal.removeClass('show');
+      }
+    });
+  </script>
 </body>
 </html>

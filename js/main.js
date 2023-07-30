@@ -15443,6 +15443,7 @@
 	    addHTML();
 	    toggleArtWorkImg();
 	});
+
 	 function addHTML() {
 	   // debugger;
 	    var el, i, domEl, fileName, xmlHttp;
@@ -15506,10 +15507,37 @@
 	        openLoginModal(this);
 	    });
 	    $(".waitlist-cta-btn").off("click").on("click", function() {
-				debugger;
 	      let email = $(this).closest(".modal-content").find("#waitListEmail");
 				  saveEmailInfo(email);
 				});
+
+	      $(".waitlist-close-modal").off("click").on("click", function() {
+	            const modal = $('#waitListModal');
+	            $('.modal-backdrop').remove();
+	              modal.modal({
+	                //backdrop: 'static',
+				          keyboard: false,
+	              });
+	              modal.modal('hide');
+	        });
+
+	     
+	        $(window).scroll(function() {
+	         // if(waitListFlag) {
+	            const modal = $('#waitListModal');
+	            const scrollableHeight = $(document).height() - $(window).height() - 1;
+	            const scrollPosition = $(window).scrollTop();
+	      
+	            // Show the modal when scroll reaches the bottom of the page
+	            if (scrollPosition >= scrollableHeight) {
+	              modal.modal({
+	                backdrop: "static",
+	                show: true
+	              });
+	              // Optionally, you can add a class to the modal to style it, e.g., modal.addClass('show');
+	            }
+	        });
+	     
 	 }
 
 	 function openLoginModal(elem) {
