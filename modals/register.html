@@ -33,15 +33,15 @@
                         <form class="form">
                             <div class="form-group">
                                 <label for="exampleInputUsername">Username</label>
-                                <input type="text" class="form-control border-top-0 border-left-0 border-right-0 border-bottom" id="exampleInputUsername" aria-describedby="emailHelp" placeholder="Username">
+                                <input type="text" name="Username" class="form-control border-top-0 border-left-0 border-right-0 border-bottom" id="exampleInputUsername" aria-describedby="emailHelp" placeholder="Username">
                             </div>
                             <div class="form-group">
                                 <label for="registerEmail">Email</label>
-                                <input type="email" class="form-control border-top-0 border-left-0 border-right-0 border-bottom" id="registerEmail" aria-describedby="emailHelp" placeholder="Email">
+                                <input type="email" name="email" class="form-control border-top-0 border-left-0 border-right-0 border-bottom" id="registerEmail" aria-describedby="emailHelp" placeholder="Email">
                             </div>
                             <div class="form-group">
                                 <label for="registerPassword">Password</label>
-                                <input type="password" class="form-control border-top-0 border-left-0 border-right-0 border-bottom" id="registerPassword" placeholder="Password">
+                                <input type="password" name="password" class="form-control border-top-0 border-left-0 border-right-0 border-bottom" id="registerPassword" placeholder="Password">
                             </div>
                         </form>
                       </div>
@@ -72,7 +72,11 @@ function openLoginModal() {
 }
 </script>
   <!-- Scripts -->
-	<script src="js/detects.js"></script>
+ 
+	<script src="js/detects.js">
+
+debugger;
+  </script>
 	<script src="js/another-file.js"></script>
 	<script src="js/main.polyfills.js"></script>
 	

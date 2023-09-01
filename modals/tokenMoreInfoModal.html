@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Copy Me</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+
+
+<style>
+    .token-content-wrapper .top-header .heading {
+        color: #212121;
+        font-family: Inter;
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: -2.4px;
+        width: 434px;
+    } 
+    .token-content-wrapper .top-header .sub-heading{
+        color: #565656;
+        font-family: Inter;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+    .token-content-wrapper .top-header .date-container{
+        color: #313131;
+        font-family: Reckless Neue;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 160%;
+        width: 165px;
+        transform: rotate(-90deg);
+        float: right;
+        position: relative;
+        top: 48px;
+}
+</style>
+ 
+</head>
+
+<body>
+    <!-- The Modal -->
+    <div class="modal" id="tokenMoreInfoModal">
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content" style="border-radius: 24px;">
+        
+          <!-- Modal Header -->
+          <div class="modal-header border-0 pb-0">    
+            <button type="button" class="close" data-dismiss="modal">
+              <img src="../svg/close-icon.svg" alt="close icon">
+            </button>
+          </div>
+          
+          <!-- Modal body -->
+          <div class="modal-body text center py-0">
+             <div class="container">
+              <div class="row">
+                  <div class="col-md-4">
+                    <img src="../img/section-4-live-token-mobile.png" alt="toke image">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="token-content-wrapper">
+                        <div class="top-header row">
+                            <div class="col-md-6">
+                                <div class="heading">The Sound of Silence</div>
+                                <div class="d-inline-flex mt-2">
+                                    <img class="user-image" src="../svg/home/user-img.svg" alt="user-image">
+                                    <div class="sub-heading ml-2 description my-3">Dan Mace</div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <h5 class="date-container">02.05.23</h5>
+                            </div>
+                        </div>
+                        <div class="tab-section">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <ul id="tabs" class="nav nav-tabs">
+                                        <li class="nav-item"><a href="" data-target="#home1" data-toggle="tab" class="nav-link small text-uppercase">Raised</a></li>
+                                        <li class="nav-item"><a href="" data-target="#profile1" data-toggle="tab" class="nav-link small text-uppercase active">Performance</a></li>
+                                        <li class="nav-item"><a href="" data-target="#messages1" data-toggle="tab" class="nav-link small text-uppercase">information</a></li>
+                                    </ul>
+                                    <br>
+                                    <div id="tabsContent" class="tab-content">
+                                        <div id="home1" class="tab-pane fade">
+                                            <div class="">
+
+                                            </div>
+                                        </div>
+                                        <div id="profile1" class="tab-pane fade active show">
+                                            <div class="row pb-2">
+                                                <div class="col-md-7">
+                                                    <p>Tabs can be used to contain a variety of content &amp; elements. They are a good way to group <a href="" class="link">relevant content</a>. Display initial content in context to the user. Enable the user to flow through <a href="" class="link">more</a> information as needed. </p>
+                                                </div>
+                                                <div class="col-md-5"><img src="//dummyimage.com/1005x559.png/5fa2dd/ffffff" class="float-right img-fluid img-rounded"></div>
+                                            </div>
+                                        </div>
+                                        <div id="messages1" class="tab-pane fade">
+                                            <div class="list-group"><a href="" class="list-group-item d-inline-block"><span class="float-right badge badge-pill badge-dark">44</span> Message 1</a> <a href="" class="list-group-item d-inline-block"><span class="float-right badge badge-pill badge-dark">8</span> Message 2</a> <a href="" class="list-group-item d-inline-block"><span class="float-right badge badge-pill badge-dark">23</span> Message 3</a> <a href="" class="list-group-item d-inline-block text-muted">Message n..</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Modal footer -->
+          <!-- <div class="modal-footer justify-content-center border-0 pt-0">
+            <button type="submit" class="btn neo-primary-btn abit-white abit-bg-purple f-20 f-weight-500" id="registerUser" style="letter-spacing: 1.3px;">Create Account</button>
+             <div class="col-md-12 text-center my-3">
+              <span class="mini-title-1 toggleRegisterLoginPopup" style="cursor: pointer;" which="creatorsignup">Are you Creator?</span><br>
+              <span class="mini-title-2">Already have an account? <a href="#" class="toggleRegisterLoginPopup" login="enable" which="login" style="color:#764CC2; cursor: pointer;">LogIn</a></span>
+             </div>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  
+
+<script>
+
+
+function openLoginModal() {
+    $("#registerModal").modal("hide");
+    $("#loginModal").modal("show");
+}
+</script>
+  <!-- Scripts -->
+	<script src="js/detects.js"></script>
+	<script src="js/another-file.js"></script>
+	<script src="js/main.polyfills.js"></script>
+	
+</body>
+</html>
